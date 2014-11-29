@@ -1,0 +1,72 @@
+<!-- Raspberry Tank Web UI, February 2013, by Ian Renton.  Released under the BSD licence. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Raspberry Tank - Touch Interface</title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/mjpg-streamer-php.js"></script>
+    <script type="text/javascript" src="../js/javascript-php.js"></script>
+  </head>
+  <body onload="loadnoimage()">
+    <div style="width:240px; margin:0 auto;">
+      <table border="0" style="width:200px;height:240px;margin: 0 auto;">
+        <tr height="25%">
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('fwdleft', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/turret-left.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('forward', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/forward.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('fwdright', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/turret-right.png" style="border:none;" />
+            </a>
+          </td>
+        </tr>
+        <tr height="25%">
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('left', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" width="50%" src="../img/left.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="stop();" >
+              <img width="50%" src="../img/stop.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('right', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/right.png" style="border:none;" />
+            </a>
+          </td>
+        </tr>
+        <tr height="25%">
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('bwdleft', true); setTimeout(function(){stop();},500);">
+              <img width="50%" src="../img/turret-elev.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('reverse', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/reverse.png" style="border:none;" />
+            </a>
+          </td>
+          <td width="33%" style="text-align:center;">
+            <a href="#" onclick="set('bwdright', true); setTimeout(function(){stop();},500);" >
+              <img width="50%" src="../img/fire.png" style="border:none;" />
+            </a>
+          </td>
+        </tr>
+      <tr height="12%">
+      <td colspan="3"><h3><center>Autonomy <span class="autonomystate">OFF</span>.  <a href="#" onclick="toggleAutonomy()"><span class="autonomybutton">Switch ON</span></a></center></td></tr>
+      <tr height="12%">
+      <td colspan="3"><div class="data">X</div></td></tr>
+      </table>
+    </div>
+  </body>
+</html>

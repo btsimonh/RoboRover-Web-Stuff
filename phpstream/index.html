@@ -1,0 +1,115 @@
+<!-- Raspberry Tank Web UI, February 2013, by Ian Renton.  Released under the BSD licence. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Raspberry Tank</title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/mjpg-streamer-php.js"></script>
+    <script type="text/javascript" src="../js/javascript-php.js"></script>
+  </head>
+  <body onload="load()">
+    <div style="width:1250px; margin:0 auto;">
+      <table border="0">
+       <tr>
+        <td>
+         <div id="left" style="width:40px;height:520px;background-color:gray;">
+         </div>
+        </td>
+        <td>
+	  <table border="0">
+          <tr>
+            <div id="fwd" style="width:640px;height:20px;background-color:gray;">
+            </div>
+          </tr>
+          <tr>
+            <div id="webcam" style="width:640px;height:480px;background-color:gray;">
+            </div>
+          </tr>
+          <tr>
+            <div id="back" style="width:640px;height:20px;background-color:gray;">
+            </div>
+          </tr>
+          </table>
+        </td>
+        <td>
+         <div id="right" style="width:40px;height:520px;background-color:gray;">
+         </div>
+        </td>
+        <td>
+         <table border="0" style="width:600px;height:600px;margin: 0 auto;">
+          <tr height="33%">
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('fwdleft', true);" onmouseup="set('stop', false);" >
+              <img src="../img/turret-left.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('forward', true);" onmouseup="set('stop', false);" >
+              <img src="../img/forward.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('fwdright', true);"  onmouseup="set('stop', false);" >
+              <img src="../img/turret-right.png" style="border:none;" />
+            </a>
+           </td>
+          </tr>
+          
+          <tr height="33%">
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('left', true);" onmouseup="set('stop', false);" >
+              <img src="../img/left.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="stop();">
+              <img src="../img/stop.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('right', true);" onmouseup="set('stop', false);" >
+              <img src="../img/right.png" style="border:none;" />
+            </a>
+           </td>
+          </tr>
+          <tr height="33%">
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('bwdleft', true);" onmouseup="set('stop', false);">
+              <img src="../img/turret-elev.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('reverse', true);" onmouseup="set('stop', false);" >
+              <img src="../img/reverse.png" style="border:none;" />
+            </a>
+           </td>
+           <td width="33%" style="text-align:center;">
+            <a href="#" onmousedown="set('bwdright', true);" onmouseup="set('stop', false);" >
+              <img src="../img/fire.png" style="border:none;" />
+            </a>
+           </td>
+          </tr>
+
+          <tr>
+	   <td colspan="3"><h3>
+	     <center>Autonomy <span class="autonomystate">OFF</span>.  
+	      <a href="#" onclick="toggleAutonomy()">
+		<span class="autonomybutton">Switch ON</span>
+	      </a>
+             </center>
+	   </td>
+	  </tr>
+         </table>
+        </td>
+       </tr>
+       <tr>
+       <td colspan="2">
+        <div class="data">
+        </div>
+       </td>
+      </tr>
+     </table>
+    </div>
+  </body>
+</html>
