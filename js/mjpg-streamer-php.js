@@ -11,7 +11,7 @@ function createImageLayer() {
   img.style.position = "absolute";
   img.style.zIndex = -1;
   img.onload = imageOnload;
-  img.src = window.location.protocol+'//' + window.location.host + "/webcam.php" + "?action=snapshot&n=" + (++imageNr);;
+  img.src = window.location.protocol+'//' + window.location.host + "/robot/webcam.php" + "?action=snapshot&n=" + (++imageNr);;
   var webcam = document.getElementById("webcam");
   webcam.insertBefore(img, webcam.firstChild);
 }
