@@ -42,7 +42,7 @@ function stop() {
 
 // Send the current command set to the vehicle.
 function send( name ) {
-  $.get(window.location.protocol+'//'+window.location.host + '//' + "control.php" + "?set" + name);
+  $.get(window.location.protocol+'//'+window.location.host + '//robot//' + "control.php" + "?set" + name);
 }
 
 // Gets the sensor data
@@ -75,7 +75,7 @@ function updateSensorData() {
         }
       }
 
-	arr[6] = 'RL1';
+	//arr[6] = 'RL1';
 
       if ((arr[5] != 'LL0') && (arr[6] != 'RL0')) {
 	      document.getElementById('fwd').style.background='red';

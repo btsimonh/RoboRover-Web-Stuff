@@ -1,0 +1,46 @@
+<!-- RoboRover MK802ii. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>RoboRover mk802ii</title>
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/mjpg-streamer-php.js"></script>
+    <script type="text/javascript" src="../js/javascript-php.js"></script>
+  </head>
+
+  <body>
+<h1>MK802ii based RoboRover with PS2 Eyetoy camera.</h1>
+<br />
+MK802ii 'Android' stick running Gentoo linux.<br />
+PIC18F4550 on (http://www.tiertex.com/index.php?route=product/product&path=59&product_id=52).<br />
+Based on and heavily influenced by RaspberryTank (see raspberrytank.ianrenton.com).  Thankyou Ian.<br />
+<br />
+Wowee 'RoboRover' chassis, using original motor driver and IR sensing.<br />
+Low level interfacing using modified UBW (http://www.schmalzhaus.com/UBW/), thank you Brian.<br />
+The UBW modifications include IR transmit and receive routines acting on multiple ports, giving sensing information which will be used for autonomous running.<br />
+High level code compiled and run on the mk802ii; RaspBerry tank inspired.<br />
+HTML serving and PHP via Lighttpd.<br />
+2 x 1800Mah lipo (from DVD players?) give a good running time.<br />
+Battery sense present; next to do is charger hunting.<br />
+Pictures by Sony (PS2  Eyetoy camera).<br />
+All interfacing through port 80.... <br/>
+<br />
+<h1>Control interface:</h1>
+Bars to top/left/right/bottom of video represent IR sense.<br />
+Yellow -> far contact<br/>
+Red -> near contact.<br />
+IR front is pulsed with high and low power to get range sens options.<br />
+<br />
+Right sensor is out at the moment.<br />
+<br />
+Autonomy is not yet implemented.<br />
+Control Images are not right.<br />
+Be gentle.<br />
+<br />
+Video is served via Mjpeg-Streamer to port 8080.  But this is accessed through a PHP page which reads the data, and forwards it on to the requester.<br />
+Control is done through port 3000, again forwarded by PHP.<br />
+
+
+  </body>
+</html>

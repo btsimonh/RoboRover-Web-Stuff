@@ -13,6 +13,8 @@ function createImageLayer() {
   img.onload = imageOnload;
   img.src = window.location.protocol+'//' + window.location.host + "/robot/webcam.php" + "?action=snapshot&n=" + (++imageNr);;
   var webcam = document.getElementById("webcam");
+  img.style.width = webcam.style.width;
+  img.style.height = webcam.style.height;
   webcam.insertBefore(img, webcam.firstChild);
 }
 
